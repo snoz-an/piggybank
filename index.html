@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="./images/favicon.svg" type="image/x-icon">
+
+     <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <!-- Main CSS -->
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="../css/helper.css">
+   <link rel="stylesheet" href="../fonts/Inter/stylesheet.css">
+   <!-- <link rel="stylesheet" href="../fonts/Onest/stylesheet.css"> -->
+   
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=db32f154-f5b8-442a-bb04-5f55f07bbae7&lang=ru_RU"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.js" integrity="sha512-CGsqPVUZUUVx5RS41AFdu5Ghj3cKcpHxg7ae66br18nqK5dTPJ2k6srKYVHMMIvaq96QIoOE8JrqXrlWuppfEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.5/swiper-bundle.min.js"></script>
+
+   <script src="./js/script.js"></script>
+   <script src="./js/logo.js"></script>
+
+   
+   <title>Копилка - Платформа онлайн-подбора финансовой стратегии</title>
+   <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    var z = null;m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(90275381, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/90275381" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+
+</head>
+
+ <div class="header_container">
+ 
+    <div class="fixed">
+    <div class="container p-0">
+    
+     <header>
+        <div class="container_header">
+        <div class="container p-0">
+            <div class="header">
+                <ul class="d-flex justify-content-between align-items-center">
+                    <li class="logo_container d-flex align-items-center">
+                        <svg width="158" height="24" viewBox="0 0 158 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 23.3455H6.05613V16.4509L8.52184 13.8764L14.2319 23.3455H21.629L12.7179 9.51273L21.1964 0.654545H14.0589L6.05613 9.81818V0.654545H0V23.3455Z" fill="white"/>
+                            <path d="M45.666 23.3455H51.7221V11.5636C51.7221 6.98182 53.4524 5.01818 56.6968 5.01818C59.5085 5.01818 60.59 6.76364 60.59 10.6909V23.3455H66.6461V9.38182C66.6461 4.14545 64.9158 0 58.6434 0C53.6687 0 51.7221 4.36364 51.7221 4.36364H51.5058V0.654545H45.666V23.3455Z" fill="white"/>
+                            <path d="M89.7959 0.654545H83.7398V12.4364C83.7398 17.0182 82.0095 18.9818 78.7651 18.9818C75.9533 18.9818 74.8719 17.2364 74.8719 13.3091V0.654545H68.8158V14.6182C68.8158 19.8545 70.5461 24 76.8185 24C81.7932 24 83.7398 19.6364 83.7398 19.6364H83.9561V23.3455H89.7959V0.654545Z" fill="white"/>
+                            <path d="M91.3167 23.3455H97.4593L102.65 7.24364L107.841 23.3455H114.33L106.241 0.654545H99.406L91.3167 23.3455Z" fill="white"/>
+                            <path d="M115.834 23.3455H121.89V16.4509L124.355 13.8764L130.065 23.3455H137.463L128.551 9.51273L137.03 0.654545H129.892L121.89 9.81818V0.654545H115.834V23.3455Z" fill="white"/>
+                            <path d="M144.157 7.63636C144.244 5.19273 145.671 4.14545 148.267 4.14545C150.646 4.14545 151.944 5.19273 151.944 6.98182C151.944 9.51273 148.397 9.81818 144.633 10.7782C140.913 11.7382 137.452 13.6582 137.452 17.8909C137.452 22.08 140.48 24 144.59 24C150.343 24 151.728 18.9818 151.728 18.9818H151.944V23.3455H158V7.85455C158 1.96364 153.674 0 148.267 0C143.076 0 138.447 1.83273 138.101 7.63636H144.157ZM151.944 11.9127C151.944 15.2727 150.862 20.0727 146.753 20.0727C144.806 20.0727 143.595 18.9818 143.595 17.2364C143.595 15.2291 145.239 14.2255 147.185 13.7455C148.916 13.3091 150.949 12.8291 151.944 11.9127Z" fill="white"/>
+                            <path d="M33.8462 0.474309C26.3808 0.474309 21.0178 6.16774 21.0178 14.1131C21.0178 20.2739 24.8363 23.7154 31.1003 23.7154C39.1663 23.7154 44.0574 17.5971 44.0574 9.99169C44.0574 4.00084 40.2818 0.474309 33.8462 0.474309ZM33.5887 4.89309C36.3775 4.89309 38.0079 6.72009 38.0079 9.82174C38.0079 13.5607 36.2059 19.2966 31.5722 19.2966C28.6976 19.2966 27.0244 17.4696 27.0244 14.2405C27.0244 9.01446 29.9419 4.89309 33.5887 4.89309Z" fill="white"/>
+                        </svg>
+                        
+                    </li>
+                    <ul class="header_li d-lg-flex d-none">
+                        <li><a href="#why">Почему Копилка</a></li>
+                        <li><a href="#forall">Для кого</a></li>
+                        <li><a href="#how_it_worked">Как работает</a></li>
+                        <li><a href="#suggestions">Цена</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>
+                    </ul>
+                    <ul class="header_phone_container d-lg-flex d-none align-items-center">
+                        <li><a class="header_phone ym_header_phone" href="tel: +7 (950) 567-11-22">+7 (950) 567-11-22</a></li>
+                        <li class="my_btn_green header_btn ml-4 ym_header_btn" data-toggle="modal" data-target="#modal_form">Получить доступ</li>
+                    </ul>
+
+                    <li>
+                        <svg class="d-lg-none d-block" data-toggle="modal" data-target="#menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12H22M2 5H22M2 19H22" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+
+
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        </div>
+
+    </header> 
+</div>
+</div>
+
+
+   
+
+<div class="container">
+    <div class="lead">
+        <img class="lead_back d-lg-block d-none" src="./images/lead_back.png" alt="">
+        <img class="lead_back lead_back_mob d-lg-none d-block" src="./images/lead_back_mob.png" alt="">
+
+
+        <div class="h">Платформа<br> онлайн-подбора </div>
+        <div class="d-flex justify-content-center lead_word_mob">
+            <div class="h">финансовой</div>
+            <div class="lead_word">стратегии</div>
+        </div>
+        <div class="d-flex justify-content-center"><div class="p mt-4">Пройдите тестирование и получите готовую финансовую стратегию с учетом последних событий: спецоперации, валютных рисков и пр.</div></div>
+        <div class="d-flex justify-content-center mt-40"><a href="#suggestions" class="my_btn my_btn_green ym_lead_btn" >Подобрать финансовую стратегию</a></div>
+    </div>
+</div>
+
+ </div> 
+
+ <div class="container">
+    <div class="after_test">
+        <div class="my_header">После теста у вас появятся</div>
+    </div>
+    <ul class="after_test_list">
+        <li>
+            <img src="./images/cards_1.png" alt="изображение">
+            <div class="h">Правильная стратегия</div>
+            <div class="p">Подобранная финансовая стратегия под ваши цели и с учетом текущих возможностей</div>
+        </li>
+        <li>
+            <img src="./images/cards_2.png" alt="изображение">
+            <div class="h">Набор макро-трендов</div>
+            <div class="p">Для корректирования стратегии в течение 5 лет</div>
+        </li>
+        <li>
+            <img src="./images/cards_3.png" alt="изображение">
+            <div class="h">Расчет готовых финансовых инструментов</div>
+            <div class="p">С анализом рисков, доходности и рекомендаций от платформы</div>
+        </li>
+    </ul>
+    <div class="d-flex justify-content-end align-items-center after_test_span_container">
+        <div class="after_test_span">...а также доступ в закрытый Telegram-чат</div>
+        <img class="telegram" src="./images/Telegram.png" alt="Телеграм">
+    </div>
+ </div>
+
+ <div class="container">
+    <div class="why" id="why">
+            <div class="my_header d-flex">
+                <div>А почему</div>
+                <img class="why__header_svg" src="./images/why_icon.svg" alt="">
+                <div class="color_green">копилка</div>           
+            </div>
+
+            <ul class="why_list">
+                <li class="why_list_item">
+                    <div class="tag">во-первых</div>
+                    <div class="h mb-12">Сервис заменяет консультацию с финансовым аналитиком или инвестиционным советником</div>
+                    <div class="p">Не третьте время и деньги на консультации с финансовым аналитиком и инвестором. После онлайн тестирования у вас появится индивидуальная финансовая стратегия с учётом последних событий: спецоперации, валютных рисков и пр.</div>
+                </li>
+                <li class="why_list_item">
+                    <div class="tag">во-вторых</div>
+                    <div class="h mb-12">Опираясь на сформированную финансовую стратегию, высока вероятность допустить ошибку</div>
+                    <div class="p">Исследование «Ассоциации развития финансовой грамотности» показало, что вероятность сохранения и приумножения финансовых активов без консультаций с финансовым аналитиком — 36%.</div>
+                </li>
+                <li class="d-lg-block d-none">
+                    <img class="" src="./images/image_why.png" alt="картинка">
+                </li>
+                <li class="why_list_item">
+                    <div class="tag">в-третьих</div>
+                    <div class="h mb-12">Перестаньте доверять старым привычкам, интуиции и принимайте решения на основе точных данных</div>
+                    <div class="p">Исследование «Ассоциации развития финансовой грамотности» показало, что вероятность сохранения и приумножения финансовых активов после использования платформы онлайн-подбора финансовой стратегии  — 88%.</div>
+                </li>
+                <li class="d-lg-none d-block">
+                    <img class="" src="./images/image_why.png" alt="картинка">
+                </li>
+            </ul>
+        
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="forall" id="forall">
+        <div class="my_header">Для всех, кто <br> заботится о капитале</div>
+    </div>
+    <ul class="forall_list">
+        <li class="forall_list_item">
+            <img src="./images/forall_list_icon_1.png" alt="">
+            <div>
+                <div class="h">Опытные</div>
+                <div class="p">Перепробовали различные финансовые возможности и им нужна правильная стратегия на ближайшие 10 лет.</div>
+            </div>
+        </li>
+        <li class="forall_list_item">
+            <img src="./images/forall_list_icon_2.png" alt="">
+            <div>
+                <div class="h">Начинающие</div>
+                <div class="p">Хотят начать, но обилие различной информации не даёт понять, как сделать первый шаг.</div>
+            </div>
+        </li>
+        <li class="forall_list_item">
+            <img src="./images/forall_list_icon_3.png" alt="">
+            <div>
+                <div class="h">Адаптируются</div>
+                <div class="p">Понимают, что стратегия не работает из-за последних событий в мире.</div>
+            </div>
+        </li>
+        <li class="forall_list_item">
+            <img src="./images/forall_list_icon_4.png" alt="">
+            <div>
+                <div class="h">Занятые</div>
+                <div class="p">Много работают и не успевают разобраться в финансовой грамотности.</div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="fiolete_container">
+    <div class="container">
+        <div class="how_it_worked" id="how_it_worked">
+            <div class="my_header">Как это работает</div>
+
+            <div class="hiw_back">
+                <div class="hiw_item_mob hiw_item_mob_left d-flex justify-content-start align-items-center">
+                    <img class="mob_img" src="./images/how_it_worked_1.svg" alt="">
+                    <div class="step_text_container step_1_text">
+                        <div class="h">1 шаг</div>
+                        <div class="p">Зарегистрируйтесь на платформе</div>
+                    </div>
+                    <img class="d-lg-block d-none" src="./images/step_2_line.svg" alt="">
+                </div>
+
+                <div class="hiw_item_mob hiw_item_mob_right d-flex justify-content-end align-items-center step_2_margin">
+                    <img class="d-lg-block d-none" src="./images/step_2_line.svg" alt="">
+                    <img src="./images/how_it_worked_2.svg" alt="">
+                    <div class="step_text_container step_2_text">
+                        <div class="h">2 шаг</div>
+                        <div class="p">Заполните контактные данные</div>
+                    </div>
+                </div>
+
+                <div class="hiw_item_mob hiw_item_mob_left mt-40 d-flex justify-content-start align-items-center">
+                    <img src="./images/how_it_worked_3.svg" alt="">
+                    <div class="step_text_container step_1_text">
+                        <div class="h">3 шаг</div>
+                        <div class="p">Оплатите доступ к платформе</div>
+                    </div>
+                    <img class="d-lg-block d-none" src="./images/step_2_line.svg" alt="">
+                </div>
+
+                <div class="hiw_item_mob hiw_item_mob_right hiw_item_mob_right_2 d-flex justify-content-end align-items-center step_2_margin" style="transform: translate(35px, -1px);">
+                    <img class="d-lg-block d-none" src="./images/step_4_line.svg" alt="">
+                    <img src="./images/how_it_worked_4.svg" alt="">
+                    <div class="step_text_container step_2_text">
+                        <div class="h">4 шаг</div>
+                        <div class="p">На платформе нажимаете «Подобрать стратегию»</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="suggestions" id="suggestions">
+            <div class="my_header" style="text-align: center; color: white;">
+                Что предлагаем
+            </div>
+
+            <div class="best_suggestions">
+                <div class="d-flex justify-content-between best_suggestions_columns">
+                    <div class="first_column">
+                        <div class="h">Лучшее предложение</div>
+                        <div class="p">Cреди конкурентов</div>
+
+                        <ul class="d-flex best_suggestions_list">
+                            <li class="d-flex">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17317C0.00433284 8.00043 -0.193701 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8079C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7363 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM14.3 7.61L9.73 13.61C9.63685 13.731 9.51721 13.8291 9.38027 13.8967C9.24333 13.9643 9.09272 13.9996 8.94 14C8.78811 14.0008 8.63803 13.967 8.50115 13.9012C8.36426 13.8353 8.24418 13.7392 8.15 13.62L5.71 10.51C5.62924 10.4063 5.5697 10.2876 5.53479 10.1609C5.49988 10.0341 5.49027 9.90172 5.50652 9.77126C5.52277 9.64079 5.56456 9.5148 5.6295 9.40049C5.69444 9.28617 5.78126 9.18576 5.885 9.105C6.09453 8.94189 6.36026 8.8687 6.62375 8.90152C6.75421 8.91777 6.8802 8.95955 6.99452 9.02449C7.10884 9.08943 7.20924 9.17626 7.29 9.28L8.92 11.36L12.7 6.36C12.7801 6.25494 12.8801 6.16669 12.9943 6.10029C13.1086 6.03388 13.2347 5.99062 13.3657 5.97298C13.4966 5.95534 13.6297 5.96365 13.7574 5.99746C13.8851 6.03126 14.0049 6.08989 14.11 6.17C14.2151 6.25011 14.3033 6.35012 14.3697 6.46433C14.4361 6.57855 14.4794 6.70472 14.497 6.83565C14.5147 6.96658 14.5063 7.0997 14.4725 7.22742C14.4387 7.35514 14.3801 7.47494 14.3 7.58V7.61Z" fill="#BBFF33"/>
+                                </svg>
+                                <div>Тестирование</div>
+                            </li>
+                            <li class="d-flex">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17317C0.00433284 8.00043 -0.193701 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8079C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7363 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM14.3 7.61L9.73 13.61C9.63685 13.731 9.51721 13.8291 9.38027 13.8967C9.24333 13.9643 9.09272 13.9996 8.94 14C8.78811 14.0008 8.63803 13.967 8.50115 13.9012C8.36426 13.8353 8.24418 13.7392 8.15 13.62L5.71 10.51C5.62924 10.4063 5.5697 10.2876 5.53479 10.1609C5.49988 10.0341 5.49027 9.90172 5.50652 9.77126C5.52277 9.64079 5.56456 9.5148 5.6295 9.40049C5.69444 9.28617 5.78126 9.18576 5.885 9.105C6.09453 8.94189 6.36026 8.8687 6.62375 8.90152C6.75421 8.91777 6.8802 8.95955 6.99452 9.02449C7.10884 9.08943 7.20924 9.17626 7.29 9.28L8.92 11.36L12.7 6.36C12.7801 6.25494 12.8801 6.16669 12.9943 6.10029C13.1086 6.03388 13.2347 5.99062 13.3657 5.97298C13.4966 5.95534 13.6297 5.96365 13.7574 5.99746C13.8851 6.03126 14.0049 6.08989 14.11 6.17C14.2151 6.25011 14.3033 6.35012 14.3697 6.46433C14.4361 6.57855 14.4794 6.70472 14.497 6.83565C14.5147 6.96658 14.5063 7.0997 14.4725 7.22742C14.4387 7.35514 14.3801 7.47494 14.3 7.58V7.61Z" fill="#BBFF33"/>
+                                </svg>
+                                <div>Анализ</div>
+                            </li>
+                            <li class="d-flex">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17317C0.00433284 8.00043 -0.193701 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8079C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7363 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM14.3 7.61L9.73 13.61C9.63685 13.731 9.51721 13.8291 9.38027 13.8967C9.24333 13.9643 9.09272 13.9996 8.94 14C8.78811 14.0008 8.63803 13.967 8.50115 13.9012C8.36426 13.8353 8.24418 13.7392 8.15 13.62L5.71 10.51C5.62924 10.4063 5.5697 10.2876 5.53479 10.1609C5.49988 10.0341 5.49027 9.90172 5.50652 9.77126C5.52277 9.64079 5.56456 9.5148 5.6295 9.40049C5.69444 9.28617 5.78126 9.18576 5.885 9.105C6.09453 8.94189 6.36026 8.8687 6.62375 8.90152C6.75421 8.91777 6.8802 8.95955 6.99452 9.02449C7.10884 9.08943 7.20924 9.17626 7.29 9.28L8.92 11.36L12.7 6.36C12.7801 6.25494 12.8801 6.16669 12.9943 6.10029C13.1086 6.03388 13.2347 5.99062 13.3657 5.97298C13.4966 5.95534 13.6297 5.96365 13.7574 5.99746C13.8851 6.03126 14.0049 6.08989 14.11 6.17C14.2151 6.25011 14.3033 6.35012 14.3697 6.46433C14.4361 6.57855 14.4794 6.70472 14.497 6.83565C14.5147 6.96658 14.5063 7.0997 14.4725 7.22742C14.4387 7.35514 14.3801 7.47494 14.3 7.58V7.61Z" fill="#BBFF33"/>
+                                </svg>
+                                <div>Стратегия</div>
+                            </li>
+                            <li class="d-flex">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17317C0.00433284 8.00043 -0.193701 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8079C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7363 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM14.3 7.61L9.73 13.61C9.63685 13.731 9.51721 13.8291 9.38027 13.8967C9.24333 13.9643 9.09272 13.9996 8.94 14C8.78811 14.0008 8.63803 13.967 8.50115 13.9012C8.36426 13.8353 8.24418 13.7392 8.15 13.62L5.71 10.51C5.62924 10.4063 5.5697 10.2876 5.53479 10.1609C5.49988 10.0341 5.49027 9.90172 5.50652 9.77126C5.52277 9.64079 5.56456 9.5148 5.6295 9.40049C5.69444 9.28617 5.78126 9.18576 5.885 9.105C6.09453 8.94189 6.36026 8.8687 6.62375 8.90152C6.75421 8.91777 6.8802 8.95955 6.99452 9.02449C7.10884 9.08943 7.20924 9.17626 7.29 9.28L8.92 11.36L12.7 6.36C12.7801 6.25494 12.8801 6.16669 12.9943 6.10029C13.1086 6.03388 13.2347 5.99062 13.3657 5.97298C13.4966 5.95534 13.6297 5.96365 13.7574 5.99746C13.8851 6.03126 14.0049 6.08989 14.11 6.17C14.2151 6.25011 14.3033 6.35012 14.3697 6.46433C14.4361 6.57855 14.4794 6.70472 14.497 6.83565C14.5147 6.96658 14.5063 7.0997 14.4725 7.22742C14.4387 7.35514 14.3801 7.47494 14.3 7.58V7.61Z" fill="#BBFF33"/>
+                                </svg>
+                                <div>Закрытый чат</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="second_column">
+                        <div class="cost_container d-flex align-items-start">
+                            <div id="my_price" class="new_cost">2 490 ₽</div>
+                            <div class="old_cost">9 990 ₽</div>
+                        </div>
+                        <div class="my_btn my_btn_grey my_btn_grey_suggestions ym_buy_btn" data-toggle="modal" data-target="#modal_form">Получить доступ</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="card_podbor">
+                <div class="fw-500 fs-md-24 fs-18 mb-2">Индивидуальный подбор плана питания</div>
+                <div class="fs-md-18 fs-14">
+                    План питания будет включать в себя:
+                </div>
+               
+                <ul class="card_podbor_li_text">
+                    <li>Годовой сбалансированный рацион на 5 приёмов пищи в день. Базовая версия рациона адаптирована для людей по бюджету и составу (без киноа и лосося). Расширенные варианты рациона вариативны по бюджету и ограничениям;</li>
+                    <li>Расчёт КБЖУ. Норму и план потребления с рекомендациями от платформы;</li>
+                    <li>Расчёт приёма витаминов, микроэлементов к годовому рациону;</li>
+                    <li>Норму водного баланса и питьевой режим.</li>
+                </ul>
+            </div>
+
+            <ul class="cards_list_podbor">
+                <li>
+                    <div class="mb-2 fs-md-24 fs-16 fw-500">Онлайн тестирование</div>
+                    <div class="fs-md-18 fs-14">За 20 минут узнаем о вашем текущем образе жизни. Вы ответите на вопросы, и мы определим ваши физиологические особенности, текущий пищевой и питьевой режим, а также физическую активность.</div>
+                </li>
+                <li class="cards_li_podbor_with_img">
+                    
+                    <div class=" d-lg-none d-flex justify-content-center"><img class="cards_li_podbor_with_img_mob" src="./images//card_img_1.png" alt=""></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="cards_li_podbor_text">
+                        <div class="mb-2 fs-md-24 fs-16 fw-500">Модуль анализа</div>
+                        <div class="fs-md-18 fs-14">Проанализируем текущий рацион, поможем сформулировать ваши цели и выявить нормы питания.</div>
+                    </div>
+                </li>
+                <li class="cards_li_podbor_with_img_2">
+                    <div class=" d-lg-none d-flex justify-content-center"><img class="cards_li_podbor_with_img_mob d-lg-none d-block" src="./images//chatimage.png" alt=""></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="cards_li_podbor_text">
+                        <div class="mb-2 fs-md-24 fs-16 fw-500">Доступ в чат</div>
+                        <div class="fs-md-18 fs-14">Доступ в закрытый чат в Telegram с членом Ассоциации диетологов для дополнительных консультаций.</div>
+                    </div>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="FAQ" id="FAQ">
+    <div class="container">
+        <div class="my_header" style="text-align: center;">Ответы на частые вопросы</div>
+
+            <ul id="list" class="col-12 p-0" style="list-style-type: none;">           
+                <li class="accordion-main accordion-main-faq" id="accordion1">
+                    <div class="accordion-item">
+                      <div class="accordion-link">
+                          <a class="accordion-item-FAQ d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="#collapse1" style="text-decoration: none;">          
+                             
+                              <span class="fw-500 FAQ_item fs-md-24 fs-20">Сколько это стоит?</span>
+                              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 1V29M1 15H29" stroke="#656666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </a>
+                      </div>
+                      <div class="accordion-body accordion-body-FAQ">
+                          <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion1" aria-expanded="false" style="height: 0px;">
+                            <div class="FAQ_item_collapse collapsed_text_margin fs-md-18 fs-14">
+                                Индивидуальный подбор плана питания, онлайн тестирование, модуль анализа, доступ в закрытый чат с экспертом. 
+                            </div>     
+                          </div>
+                      </div>
+                    </div>                       
+                </li>
+
+                <li class="accordion-main accordion-main-faq" id="accordion2">
+                    <div class="accordion-item">
+                      <div class="accordion-link">
+                          <a class="accordion-item-FAQ d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="#collapse1" style="text-decoration: none;">          
+                             
+                              <span class="fw-500 FAQ_item fs-md-24 fs-20">Как вернуть средства?</span>
+                              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 1V29M1 15H29" stroke="#656666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </a>
+                      </div>
+                      <div class="accordion-body accordion-body-FAQ">
+                          <div id="collapse2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion2" aria-expanded="false" style="height: 0px;">
+                            <div class="FAQ_item_collapse collapsed_text_margin fs-md-18 fs-14">
+                                Позвонить по горячей линии <a href="tel: +7 (950) 567-11-22">+7 (950) 567-11-22</a>, назвать контактные данные, дату покупку, причину отказа. Средства придут в течение 1 рабочего дня
+                            </div>     
+                          </div>
+                      </div>
+                    </div>                       
+                </li>
+
+                <li class="accordion-main accordion-main-faq" id="accordion3">
+                    <div class="accordion-item">
+                      <div class="accordion-link">
+                          <a class="accordion-item-FAQ d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="#collapse1" style="text-decoration: none;">          
+                             
+                              <span class="fw-500 FAQ_item fs-md-24 fs-20">Почему это выгодно?</span>
+                              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 1V29M1 15H29" stroke="#656666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </a>
+                      </div>
+                      <div class="accordion-body accordion-body-FAQ">
+                          <div id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion3" aria-expanded="false" style="height: 0px;">
+                            <div class="FAQ_item_collapse collapsed_text_margin fs-md-18 fs-14">
+                                Платформа заменяет консультацию с финансовым аналитиком и инвестиционным советником. Стратегии адаптирована с учетом последних событий: спецоперации, валютных рисков и пр.
+                            </div>     
+                          </div>
+                      </div>
+                    </div>                       
+                </li>
+
+                <li class="accordion-main accordion-main-faq" id="accordion4">
+                    <div class="accordion-item">
+                      <div class="accordion-link">
+                          <a class="accordion-item-FAQ d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="#collapse1" style="text-decoration: none;">          
+                             
+                              <span class="fw-500 FAQ_item fs-md-24 fs-20">Какие гарантии качества?</span>
+                              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 1V29M1 15H29" stroke="#656666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </a>
+                      </div>
+                      <div class="accordion-body accordion-body-FAQ">
+                          <div id="collapse4" class="collapse" aria-labelledby="headingOne" data-parent="#accordion4" aria-expanded="false" style="height: 0px;">
+                            <div class="FAQ_item_collapse collapsed_text_margin fs-md-18 fs-14">
+                                Платформа разработана "Ассоциацией развития финансовой грамотности". Уже более 10 000 пользователей прошли тест и используют подобранную стратегию
+                            </div>     
+                          </div>
+                      </div>
+                    </div>                       
+                </li>
+
+                                
+            </ul>
+    </div>
+
+
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center logo_container">
+            <img src="./images/logo.svg" alt="">
+            <a class="phone ym_footer_phone" href="tel: +7 (950) 567-11-22">+7 (950) 567-11-22</a>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center footer_list_container">
+            <ul class="footer_list d-flex">
+                <li class="d-lg-block d-none" style="color: white;">@ Копилка, 2022</li>
+                <li><a href="./pdf/Копилка - Политика конфиденциальности.pdf" target="_blank">Политика конфиденциальности</a></li>
+                <li><a href="./pdf/Копилка - Оферта.pdf" target="_blank">Договор оферты</a></li>
+                <li id="delatimITLogo"></li>
+            </ul>
+
+            <div class="my_btn my_btn_grey ym_footer_btn" data-toggle="modal" data-target="#modal_form">Получить доступ</div>
+            <li class="d-lg-none d-block" style="color: #A0A2A4; align-self: flex-start; margin-top: 32px;">@ Копилка, 2022</li>
+
+        </div>
+    </div>
+</footer>
+
+
+ <body>
+    
+
+
+
+                        <!-- TINKOF -->
+                            <style>.tinkoffPayRow{display:none;margin:1%;width:160px;}</style>
+                        <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"></script>
+                        <form id="TinkoffPayForm" name="TinkoffPayForm" onsubmit="pay(this); return false;">
+                        <input class="tinkoffPayRow" type="hidden" name="terminalkey" value="1662555337674">
+                        <input class="tinkoffPayRow" type="hidden" name="frame" value="true">
+                        <input class="tinkoffPayRow" type="hidden" name="language" value="ru">
+                            <input id="price" class="tinkoffPayRow" type="text" placeholder="Сумма заказа" name="amount" required>
+                            <input class="tinkoffPayRow" type="text" placeholder="Номер заказа" name="order">
+                            <input class="tinkoffPayRow" type="text" placeholder="Описание заказа" name="description">
+                            <input id="buer_name" class="tinkoffPayRow" type="text" placeholder="ФИО плательщика" name="name">
+                            <input id="buer_email" class="tinkoffPayRow" type="text" placeholder="E-mail" name="email">
+                            <input id="buer_phone" class="tinkoffPayRow" type="text" placeholder="Контактный телефон" name="phone">
+                            <input class="tinkoffPayRow" type="submit" value="Оплатить">
+                        </form>
+                        <!-- TINKOF -->
+
+
+    
+                        <!-- MODAL-MENU -->
+                        <div class="modal fade" id="menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-menu">
+                            <div class="modal-content modal-content-menu container">
+                               
+                                <svg data-dismiss="modal" aria-label="Close" class="modal_close_btn" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0711 0.928917L0.928932 15.0711M0.928932 0.928917L15.0711 15.0711" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                               
+                        
+
+                                <ul class="menu_mob">
+                                    <li>
+                                        <svg width="211" height="32" viewBox="0 0 211 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 31.1273H8.08761V21.9345L11.3804 18.5018L19.0059 31.1273H28.8843L16.984 12.6836L28.3066 0.872727H18.7748L8.08761 13.0909V0.872727H0V31.1273Z" fill="white"/>
+                                            <path d="M60.9843 31.1273H69.0719V15.4182C69.0719 9.30909 71.3826 6.69091 75.7153 6.69091C79.4703 6.69091 80.9145 9.01818 80.9145 14.2545V31.1273H89.0021V12.5091C89.0021 5.52727 86.6913 0 78.3149 0C71.6715 0 69.0719 5.81818 69.0719 5.81818H68.7831V0.872727H60.9843V31.1273Z" fill="white"/>
+                                            <path d="M119.917 0.872727H111.83V16.5818C111.83 22.6909 109.519 25.3091 105.186 25.3091C101.431 25.3091 99.9872 22.9818 99.9872 17.7455V0.872727H91.8995V19.4909C91.8995 26.4727 94.2103 32 102.587 32C109.23 32 111.83 26.1818 111.83 26.1818H112.119V31.1273H119.917V0.872727Z" fill="white"/>
+                                            <path d="M121.948 31.1273H130.151L137.084 9.65818L144.016 31.1273H152.681L141.878 0.872727H132.751L121.948 31.1273Z" fill="white"/>
+                                            <path d="M154.689 31.1273H162.777V21.9345L166.07 18.5018L173.695 31.1273H183.573L171.673 12.6836L182.996 0.872727H173.464L162.777 13.0909V0.872727H154.689V31.1273Z" fill="white"/>
+                                            <path d="M192.514 10.1818C192.63 6.92364 194.536 5.52727 198.002 5.52727C201.179 5.52727 202.912 6.92364 202.912 9.30909C202.912 12.6836 198.175 13.0909 193.15 14.3709C188.181 15.6509 183.56 18.2109 183.56 23.8545C183.56 29.44 187.604 32 193.092 32C200.775 32 202.624 25.3091 202.624 25.3091H202.912V31.1273H211V10.4727C211 2.61818 205.223 0 198.002 0C191.07 0 184.889 2.44364 184.426 10.1818H192.514ZM202.912 15.8836C202.912 20.3636 201.468 26.7636 195.98 26.7636C193.381 26.7636 191.763 25.3091 191.763 22.9818C191.763 20.3055 193.958 18.9673 196.558 18.3273C198.869 17.7455 201.584 17.1055 202.912 15.8836Z" fill="white"/>
+                                            <path d="M45.1996 0.632412C35.2301 0.632412 28.068 8.22366 28.068 18.8174C28.068 27.0318 33.1674 31.6206 41.5327 31.6206C52.3044 31.6206 58.8361 23.4628 58.8361 13.3223C58.8361 5.33445 53.7941 0.632412 45.1996 0.632412ZM44.8558 6.52412C48.5801 6.52412 50.7574 8.96012 50.7574 13.0956C50.7574 18.0809 48.3509 25.7288 42.1629 25.7288C38.3241 25.7288 36.0895 23.2928 36.0895 18.9874C36.0895 12.0193 39.9857 6.52412 44.8558 6.52412Z" fill="white"/>
+                                        </svg>                                                                            
+                                    </li>
+
+                                    <li><a class="modal_link" href="#why">Почему Копилка</a></li>
+                                    <li><a class="modal_link" href="#forall">Для кого</a></li>
+                                    <li><a class="modal_link" href="#how_it_worked">Как работает</a></li>
+                                    <li><a class="modal_link" href="#suggestions">Цена</a></li>
+                                    <li><a class="modal_link" href="#FAQ">FAQ</a></li>
+                                </ul>
+                               
+                                <ul class="menu_mob_green">
+                                    <li class="mb-40"><a class="header_phone ym_header_phone" href="tel: +7 (950) 567-11-22">+7 (950) 567-11-22</a></li>
+                                    <li class="my_btn_green header_btn w-100 menu_form_btn ym_header_btn" data-toggle="modal" data-target="#modal_form">Получить доступ</li>
+                                </ul>
+
+
+
+                            </div>
+                            </div>
+                        </div>
+                        <!-- MODAL-MENU -->
+
+                         <!-- MODAL-FORM -->
+                         <div class="modal fade" id="modal_form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <svg class="modal_close_btn" data-dismiss="modal" aria-label="Close" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.8985 1.1005L1.09953 20.8995M1.09953 1.1005L20.8985 20.8995" stroke="#656666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <div class="modal_header mb-12">Зарегистрируйтесь на платформе</div>
+                                <div class="fs-md-18 fs-14 mb-4">Заполните контактные данные для доступа к платформе</div>
+                        
+                                <style>
+                                    .form-label-2{
+                                        position: absolute;
+                                        color: #1E1F1F;;
+                                        left: 6%;
+                                        top: 19%;
+                                        transition: .3s;
+                                    }
+                                    .form-label-2_after {
+                                        position: absolute;
+                                        color: #1E1F1F;;
+                                        left: 5%;
+                                        top: 2%;
+                                        font-size: 11px;
+                                    }
+                                </style>
+
+                                <form class="form" id="form_feedback">
+                                    <div class="form-item">
+                                    <input id="name" name='name' type="text" class="input-container-name form-input" required>
+                                    <label class="form-label">Имя</label>
+                                    </div>
+                                    <div class="form-item">
+                                    <input id="phone" name='phone' type="text" class="form-input input-container-phone" required>
+                                    <label class="form-label">Телефон</label>
+                                    </div>
+                                    <div class="form-item">
+                                        <input id="mail" name='mail' type="text" class="form-input input-container-mail">
+                                        <label class="form-label-2">Почта</label>
+                                    </div>
+                                
+                                    <button class="modal_btn modal_btn_disabled ym_modal_btn" type="submit" data-toggle="modal" data-target="#modal_form" disabled>Получить доступ</button>
+                                </form>
+
+                            </div>
+                            </div>
+                        </div>
+                        <!-- MODAL-FORM -->
+
+                        <!-- //MODAL-THANK-YOU////////////////////////////////////////////// -->
+ 
+                        <div class="modal fade" id="modal-help" tabindex="-1" aria-labelledby="modal-help" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <svg class="modal_close_btn" data-dismiss="modal" aria-label="Close" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.8985 1.1005L1.09953 20.8995M1.09953 1.1005L20.8985 20.8995" stroke="#656666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg class="mb-4" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="28.5" stroke="#056B53" stroke-width="3"/>
+                                    <path d="M17.5 30L26.25 40L42.5 20" stroke="#056B53" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <div class="modal_header mb-12">Спасибо!</div>
+                                <div class="fs-md-18 fs-14">Заявка на получение доступа отправлена.</div>
+
+                            </div>
+                            </div>
+                        </div>
+                        <!-- //MODAL-THANK-YOU////////////////////////////////////////////// -->
+
+
+
+                        
+ </body>
+
+
+ 
+
+
+</html>
